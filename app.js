@@ -1,17 +1,28 @@
-
-gsap.from(".video-sec", {
-    scale : 0.6,
-    y:-35,
+gsap.from(".ani3", {
+    opacity:0,
+    duration:1,
     scrollTrigger:{
-        scroller: "body",
-        trigger: ".video-sec",
-        // markers: true,
-        start : "top 97%",
-        end : "top 3.5%",
+        scroller:"body",
+        trigger : ".ani3",
+        // markers:true,
+        start : "top 70%",
+        end : "top 60%",
         scrub : 0
     }
 })
 
+gsap.from(".ani3 h2", {
+    opacity:0.4,
+    stagger: 1,
+    scrollTrigger: {
+        scroller : "body",
+        trigger : ".ani3",
+        // markers : true,
+        start : "top 22%",
+        end : "top -5%",
+        scrub : 0
+    }
+})
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -31,7 +42,85 @@ mm.add("(min-width: 990px)", () => {
             scrub : 0 
         }
     })
+
+    gsap.to(".sixth-first", {
+        x:200,
+        scrollTrigger:{
+            scroller : "body",
+            trigger : ".sixth-first",
+            // markers : true,
+            start : "top 100%",
+            end : "top -100%",
+            scrub : 0
+        }
+    })
+    gsap.to(".sixth-second", {
+        x:-600,
+        scrollTrigger:{
+            scroller : "body",
+            trigger : ".sixth-second",
+            // markers : true,
+            start : "top 100%",
+            end : "top -100%",
+            scrub : 0
+        }
+    })
 });
+
+mm.add("(min-width: 770px)", () => {
+    gsap.from(".video-sec", {
+        scale : 0.6,
+        y:-35,
+        scrollTrigger:{
+            scroller: "body",
+            trigger: ".video-sec",
+            // markers: true,
+            start : "top 97%",
+            end : "top 3.5%",
+            scrub : 0
+        }
+    })
+    gsap.from(".ani4", {
+        opacity:0,
+        duration:1,
+        scrollTrigger:{
+            scroller:"body",
+            trigger : ".ani4",
+            // markers:true,
+            start : "top 70%",
+            end : "top 60%",
+            scrub : 0
+        }
+    })
+    
+    gsap.from(".ani4 h2", {
+        opacity:0.4,
+        stagger: 1,
+        scrollTrigger: {
+            scroller : "body",
+            trigger : ".ani4",
+            // markers : true,
+            start : "top 22%",
+            end : "top -5%",
+            scrub : 0
+        }
+    })
+
+    
+});
+
+gsap.to(".nav", {
+    height : 100,
+    backgroundColor : "#151414",
+    scrollTrigger:{
+        scroller:"body",
+        trigger: ".video-sec",
+        // markers : true,
+        start : "top 97%",
+        end : "top 40%",
+        scrub : 0
+    }
+})
 
 const menuButton = document.querySelector(".menu");
 let clicked = false;
