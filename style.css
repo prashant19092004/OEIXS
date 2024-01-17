@@ -322,6 +322,7 @@ body{
 
 /* seventh Section  */
 .seventh-section {
+    width: 100vw;
     padding : 10vw 50px;
     display: flex;
     justify-content: center;
@@ -347,6 +348,108 @@ body{
     margin: auto;
 }
 
+
+/*  EIGHTH SECTION  */
+
+.eighth-lists{
+    width : 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+.eighth-lists .first{
+    width : 30%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap : 20px;
+}
+.content{
+    width : 100%;
+}
+.content ul{
+    width : 100%;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+}
+.heading h4{
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+.content ul li{
+    width: 100%;
+    color : #adbabb;
+    font-weight: 400;
+    font-size: 1rem;
+    padding : 10px 0px;
+    border-bottom: 1px solid #adbabb7e;
+}
+
+
+/*  NINTH SECTION  */
+.slider2{
+    width : 100%;
+    flex-direction: column;
+    gap : 2vw;
+}
+.display{
+    width : 100%;
+    overflow: hidden;
+}
+.display-box{
+    width : 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    transition: all linear 0.5s;
+    /* transform: translateX(-500px); */
+}
+.display-main{
+    min-width : 100%;
+    background-color: #ddc6a4;
+    flex-direction: column;
+    border-radius: 20px;
+    text-align: center;
+    padding : 30px;
+    color: #151414;
+    gap : 30px;
+}
+.display-main>p{
+    font-size: 1.6rem;
+    /* font-weight: 500; */
+}
+.display-main>div>h5{
+    font-size: 1rem;
+    font-weight: 500;
+}
+.display-main>div>p{
+    font-size: 0.8rem;
+    color : #151414b8;
+}
+.display-main img{
+    height : 25px;
+}
+.key{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap : 10px;
+}
+.point{
+    height : 13px;
+    width : 13px;
+    border-radius: 50px;
+    background-color: #E0F1F3;
+    opacity: 0.4;
+    cursor: pointer;
+    transition: all linear 0.2s;
+}
+.one{
+    opacity: 1;
+}
 
 .extra{
     width : 100%;

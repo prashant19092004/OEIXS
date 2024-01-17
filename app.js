@@ -23,6 +23,31 @@ gsap.from(".ani3 h2", {
         scrub : 0
     }
 })
+gsap.from(".ani5", {
+    opacity: 0,
+    y : 100,
+    duration : 1,
+    scrollTrigger: {
+        scroller : "body",
+        trigger : ".ani5",
+        // markers : true,
+        start : "top 85%",
+        end : "top 75%"
+    }
+})
+gsap.from(".ani6", {
+    opacity: 0,
+    y : 100,
+    duration : 1,
+    scrollTrigger: {
+        scroller : "body",
+        trigger : ".ani6",
+        // markers : true,
+        start : "top 95%",
+        end : "top 75%"
+    }
+})
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -105,6 +130,30 @@ mm.add("(min-width: 770px)", () => {
             scrub : 0
         }
     })
+    gsap.from(".ani8 h2", {
+        opacity:0.4,
+        stagger: 1,
+        scrollTrigger: {
+            scroller : "body",
+            trigger : ".ani8",
+            // markers : true,
+            start : "top 22%",
+            end : "top -5%",
+            scrub : 0
+        }
+    })
+    gsap.from(".ani9 h2", {
+        opacity:0.4,
+        stagger: 1,
+        scrollTrigger: {
+            scroller : "body",
+            trigger : ".ani9",
+            // markers : true,
+            start : "top 22%",
+            end : "top -5%",
+            scrub : 0
+        }
+    })
 
     
 });
@@ -143,4 +192,31 @@ menuButton.addEventListener("click", () => {
         clicked = false;
     }
 
+})
+
+const one = document.querySelector(".one");
+const two = document.querySelector(".two");
+const three = document.querySelector(".three");
+const key = document.querySelectorAll(".point");
+const display = document.querySelector(".display-box");
+
+key.forEach((event) => {
+    event.addEventListener("click", (index) => {
+        one.style.opacity = 0.4;
+        two.style.opacity = 0.4;
+        three.style.opacity = 0.4;
+        let pressed = index.target.classList[0];
+        if(pressed === "one"){
+            display.style.transform = "translate(0%)";
+            one.style.opacity = 1;
+        }
+        else if(pressed === "two"){
+            display.style.transform = "translate(-100%)";
+            two.style.opacity = 1;
+        }
+        else if(pressed === "three"){
+            display.style.transform = "translate(-200%)";
+            three.style.opacity = 1;
+        }
+    })
 })
