@@ -10,7 +10,6 @@ gsap.from(".ani3", {
         scrub : 0
     }
 })
-
 gsap.from(".ani3 h2", {
     opacity:0.4,
     stagger: 1,
@@ -42,6 +41,18 @@ gsap.from(".ani6", {
     scrollTrigger: {
         scroller : "body",
         trigger : ".ani6",
+        // markers : true,
+        start : "top 95%",
+        end : "top 75%"
+    }
+})
+gsap.from(".eighth-lists .first", {
+    opacity: 0,
+    y : 100,
+    duration : 1,
+    scrollTrigger: {
+        scroller : "body",
+        trigger : ".eighth-lists .first",
         // markers : true,
         start : "top 95%",
         end : "top 75%"
@@ -87,6 +98,17 @@ mm.add("(min-width: 990px)", () => {
             // markers : true,
             start : "top 100%",
             end : "top -100%",
+            scrub : 0
+        }
+    })
+    gsap.to(".nav", {
+        overflow : "hidden",
+        scrollTrigger:{
+            scroller:"body",
+            trigger: ".video-sec",
+            // markers : true,
+            start : "top 30%",
+            end : "top -30%",
             scrub : 0
         }
     })
@@ -137,8 +159,8 @@ mm.add("(min-width: 770px)", () => {
             scroller : "body",
             trigger : ".ani8",
             // markers : true,
-            start : "top 22%",
-            end : "top -5%",
+            start : "top 40%",
+            end : "top 25%",
             scrub : 0
         }
     })
@@ -159,14 +181,15 @@ mm.add("(min-width: 770px)", () => {
 });
 
 gsap.to(".nav", {
-    height : 100,
+    height : 90,
     backgroundColor : "#151414",
+    // overflow : "hidden",
     scrollTrigger:{
         scroller:"body",
-        trigger: ".video-sec",
-        // markers : true,
-        start : "top 97%",
-        end : "top 40%",
+        trigger: ".nav",
+        markers : true,
+        start : "top -10%",
+        end : "top -60%",
         scrub : 0
     }
 })
