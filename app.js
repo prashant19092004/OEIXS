@@ -58,7 +58,12 @@ gsap.from(".eighth-lists .first", {
         end : "top 75%"
     }
 })
-
+// gsap.to(".news-ani", {
+//     y : ,
+//     scale : 0,
+//     duration : 2,
+//     delay : 1
+// })
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -173,6 +178,18 @@ mm.add("(min-width: 770px)", () => {
             // markers : true,
             start : "top 22%",
             end : "top -5%",
+            scrub : 0
+        }
+    })
+    gsap.from(".ani10 h2", {
+        opacity:0.4,
+        stagger: 1,
+        scrollTrigger: {
+            scroller : "body",
+            trigger : ".ani10",
+            // markers : true,
+            start : "top 40%",
+            end : "top 25%",
             scrub : 0
         }
     })
