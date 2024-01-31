@@ -1,3 +1,8 @@
+// gsap.from("", {
+//     opacity:0,
+//     duration:1,
+//     delay:0.5
+// })
 gsap.from(".ani3", {
     opacity:0,
     duration:1,
@@ -64,6 +69,16 @@ gsap.from(".eighth-lists .first", {
 //     duration : 2,
 //     delay : 1
 // })
+gsap.from(".news-img img", {
+    y:400,
+    scrollTrigger:{
+        scroller : "body",
+        trigger : ".news-img",
+        // markers : true,
+        start  : "top 70%",
+        end : "top 40%"
+    }
+})
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -84,26 +99,26 @@ mm.add("(min-width: 990px)", () => {
         }
     })
 
-    gsap.to(".sixth-first", {
+    gsap.to(".sixth-first-slider", {
         x:200,
         scrollTrigger:{
             scroller : "body",
-            trigger : ".sixth-first",
+            trigger : ".sixth-first-slider",
             // markers : true,
             start : "top 100%",
             end : "top -100%",
-            scrub : 0
+            scrub : 1
         }
     })
-    gsap.to(".sixth-second", {
+    gsap.to(".sixth-second-slider", {
         x:-600,
         scrollTrigger:{
             scroller : "body",
-            trigger : ".sixth-second",
+            trigger : ".sixth-second-slider",
             // markers : true,
             start : "top 100%",
             end : "top -100%",
-            scrub : 0
+            scrub : 1
         }
     })
     gsap.to(".nav", {
